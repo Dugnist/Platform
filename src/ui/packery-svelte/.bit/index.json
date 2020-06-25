@@ -1,0 +1,18 @@
+[
+  {
+    "id": {
+      "scope": null,
+      "name": "packery-svelte"
+    },
+    "isSymlink": true,
+    "hash": "e40142937a99d4f8ef7478af76c0a42642e460b6"
+  },
+  {
+    "id": {
+      "scope": "dugnist.packery-svelte",
+      "name": "packery-svelte"
+    },
+    "isSymlink": false,
+    "hash": "f216023c103c319ec2b6e0aac5c845cd1980c0ac"
+  }
+]
