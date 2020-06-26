@@ -119,7 +119,8 @@
           name: 'ElasticSearch',
         },
         {
-          image: './images/sphinx.svg',
+          image: './images/elasticsearch.svg',
+          // image: './images/sphinx.svg',
           imgwidth: '60',
           name: 'Sphinx',
         },
@@ -184,12 +185,11 @@
     {sector.title}
     <hr />
     <br />
-    <!-- class="grid" -->
     <Grid>
       {#each sector.tools as tool}
         <GridItem>
           <Block type="block3" class="card">
-            <img src={tool.image} alt="" width={tool.imgwidth} />
+            <img src={tool.image} alt={tool.name} width={tool.imgwidth} />
             <div class="card-description">
               <div style="font-size: 11px">
                 name:
@@ -203,7 +203,7 @@
                 <i>Not installed</i>
               </div>
               <div style="font-size: 11px">
-                <a href="#">Install</a>
+                <a href="install">Install</a>
               </div>
             </div>
           </Block>

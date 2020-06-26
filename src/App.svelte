@@ -1,13 +1,13 @@
 <script>
   // Router
-  import { Router, Route, Link } from "yrv";
+  import { Router, Route, Link } from 'yrv';
   // Additional
-  import Variables from "svelte-atoms/Variables.svelte";
+  import Variables from 'svelte-atoms/Variables.svelte';
   // Pages
-  import Install from "./modules/Install/pages/Install.svelte";
-  import MainPage from "./modules/Main/pages/MainPage.svelte";
+  import Install from './modules/Install/pages/Install.svelte';
+  import MainPage from './modules/Main/pages/MainPage.svelte';
 
-  import NL from "./plugins/neutralino";
+  import NL from './plugins/neutralino';
   // Used for SSR. A falsy value is ignored by the Router.
   export let url = null;
 
@@ -32,7 +32,7 @@
   //       rej(error.message);
   //     }
   //   });
-  let message = "";
+  let message = '';
   // end test
 </script>
 
@@ -73,7 +73,12 @@
   <br />
   <hr />
   <br />
-  <div on:click={() => NL.help().then(r => (message = r))}>Run cmd command</div>
+  <div
+    on:click={() => NL.help().then((r) => {
+        message = r;
+      })}>
+    Run cmd command
+  </div>
   <br />
   <span id="info">{message}</span>
 </main>
