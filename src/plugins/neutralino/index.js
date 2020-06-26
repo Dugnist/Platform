@@ -20,5 +20,5 @@ const check = setInterval(() => {
 }, 500);
 
 export default {
-  help: NeutralinoMethods.help,
+  exec: NeutralinoMethods.exec,
 };

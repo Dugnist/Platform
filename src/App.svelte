@@ -11,29 +11,7 @@
   // Used for SSR. A falsy value is ignored by the Router.
   export let url = null;
 
-  // test
-  // const exec = () =>
-  //   new Promise((res, rej) => {
-  //     try {
-  //       window.Neutralino.os.runCommand(
-  //         'help',
-  //         (data) => {
-  //           message = data;
-  //           res(data);
-  //         },
-  //         () => {
-  //           rej('error');
-  //           console.log('errror');
-  //         }
-  //       );
-  //     } catch (error) {
-  //       console.log(error.message);
-  //       message = error.message;
-  //       rej(error.message);
-  //     }
-  //   });
   let message = '';
-  // end test
 </script>
 
 <style>
@@ -73,12 +51,15 @@
   <br />
   <hr />
   <br />
-  <div
-    on:click={() => NL.help().then((r) => {
-        message = r;
-      })}>
-    Run cmd command
-  </div>
+  <span id="info" />
   <br />
-  <span id="info">{message}</span>
+  <button
+    on:click={() => NL.exec('node -v').then((r) => {
+        message = r.stdout;
+      })}>
+    Click to run console command "node -v" on PC
+  </button>
+  <br />
+  <br />
+  <span>{message}</span>
 </main>

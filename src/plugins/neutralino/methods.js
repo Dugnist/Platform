@@ -1,8 +1,5 @@
 export default {
   start: () => {
-    // const infoTag = document.getElementById('info');
-
-    // if (infoTag) {
     document.getElementById('info').innerHTML =
       window.NL_NAME +
       ' is running on port ' +
@@ -13,10 +10,9 @@ export default {
       '<span>v' +
       window.NL_VERSION +
       '</span>';
-    // }
   },
 
-  help: (command) =>
+  exec: (command) =>
     new Promise((res, rej) => {
       try {
         window.Neutralino.os.runCommand(
